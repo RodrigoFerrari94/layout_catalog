@@ -6,6 +6,7 @@
   width: 200px;
   border-radius: 5px;
   border: 1px solid #f3f3f3;
+  transition: transform 300ms ease;
 
   &__product-image {
     width: 160px;
@@ -71,6 +72,7 @@
   }
 
   &__button-buy {
+    text-transform: uppercase;
     padding: 0;
     margin-block: 16px 0;
     height: 40px;
@@ -93,11 +95,24 @@
     text-decoration: none;
     background-color: #00acdc;
     color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+      border: 1px solid #00acdc;
+    }
   }
 
-  &__link:hover {
+  &:hover {
+    transform: scale(120%);
+  }
+
+  &:hover &__product-title {
+    color: #34568b;
+  }
+
+  &:hover &__link {
     background-color: #fff;
     color: #00acdc;
-    border: 1px solid #00acdc;
   }
 }
